@@ -1,5 +1,3 @@
 export const LayoutApp = () => {
-  return (
-    <></>
-  )
-}
+  return <></>;
+};

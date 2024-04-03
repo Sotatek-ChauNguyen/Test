@@ -1,15 +1,16 @@
-import { formatApp } from "@/utils"
-import { Box, Input, Stack, TextField, styled } from "@mui/material"
+import { formatApp } from '@/utils';
+import { Box, Input, Stack, TextField, styled } from '@mui/material';
+import { LoginForm } from '../auth';
 
 export const HomePage = () => {
-  const data = formatApp()
+  const data = formatApp();
   return (
     <StyledContainer>
-      <TextField placeholder="Mincy" label="Text field" />
+      <LoginForm />
     </StyledContainer>
-  )
-}
+  );
+};
 
 const StyledContainer = styled(Stack)({
-  backgroundColor: 'transparent',
-})
+  backgroundColor: 'transparent'
+});

@@ -6,8 +6,14 @@ import { PublicRoute } from './PublicRoute';
 import { RootLayout } from '@/components/layout';
 
 const { HomePage } = lazyImport(() => import('@/module'), 'HomePage');
-const { ErrorPage } = lazyImport(() => import('@/components/layout'), 'ErrorPage');
-const { NotFoundPage } = lazyImport(() => import('@/components/layout'), 'NotFoundPage');
+const { ErrorPage } = lazyImport(
+  () => import('@/components/layout'),
+  'ErrorPage'
+);
+const { NotFoundPage } = lazyImport(
+  () => import('@/components/layout'),
+  'NotFoundPage'
+);
 
 export function AppRouterProvider() {
   const router = useMemo(
@@ -40,16 +46,10 @@ export function AppRouterProvider() {
   );
 
   return (
-    <Suspense
-      fallback={
-        <></>
-      }
-    >
+    <Suspense fallback={<></>}>
       <RouterProvider
         router={router}
-        fallbackElement={
-          <></>
-        }
+        fallbackElement={<></>}
       />
     </Suspense>
   );

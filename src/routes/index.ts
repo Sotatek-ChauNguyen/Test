@@ -1,1 +1,1 @@
-export * from './app-router-provider'
+export * from './app-router-provider';

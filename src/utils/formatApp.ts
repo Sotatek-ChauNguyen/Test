@@ -1,1 +1,1 @@
-export const formatApp = () => {}
+export const formatApp = () => {};
